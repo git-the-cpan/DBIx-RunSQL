@@ -3,7 +3,7 @@ use strict;
 use DBI;
 
 use vars qw($VERSION);
-$VERSION = '0.12';
+$VERSION = '0.13';
 
 =head1 NAME
 
@@ -260,7 +260,7 @@ sub run_sql {
                 };
             } elsif( 0 < $sth->{NUM_OF_FIELDS} ) {
                 # SELECT statement, output results
-                print $self->format_results( $sth );
+                print $self->format_results( sth => $sth );
             };
         };
     };
